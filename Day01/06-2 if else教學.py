@@ -17,8 +17,6 @@ Created on Fri Jul 16 23:08:35 2021
 
 
    
-# if else 的一行搞定
-
 
 
 # 課堂練習 input + if + elif + else 的BMI應用

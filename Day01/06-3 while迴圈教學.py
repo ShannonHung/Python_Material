@@ -12,5 +12,5 @@ Created on Mon Jul 19 21:50:09 2021
 # 改進3: while 搭配 break, continue
         
 
-# 其他: while 搭配 else? 
+ 
 
