@@ -41,29 +41,58 @@ Created on Fri Jul 16 23:08:35 2021
 
 # 課堂練習 input + if + elif + else 的BMI應用
 ## float => str 轉乘 float 有小數點, input 可以讓使用者輸入資料
-weight = float(input("請輸入你的體重(kg)"))
-height = float(input("請輸入你的身高(cm)"))
-print(f"{height}是身高, {weight}是體重")
-## 算使用者的bmi: 體重/身高(m)平方
-bmi = weight / ((height/100) ** 2) # pow((height/100), 2)
-print(f"BMI是{bmi:+5.2f}")
-# 目前bmi狀態
-if (0 < bmi < 18.5): # False
-    print("體重過輕")
-elif (bmi >= 18.5 and bmi < 24): # else if (判斷) : True and False = False
-    print("你很健康") 
-elif (bmi >= 24 and bmi < 27): # True and False = False
-    print("過重")
-elif (bmi >= 27 and bmi < 30): # True and True = True
-    print("輕度肥胖")
-elif (bmi >= 30 and bmi <= 35):
-    print("中度肥胖")
-elif (bmi >= 35):
-    print("重度肥胖")
-else:
-    print("你的數字可能有問題?")
+# =============================================================================
+# weight = float(input("請輸入你的體重(kg)"))
+# height = float(input("請輸入你的身高(cm)"))
+# print(f"{height}是身高, {weight}是體重")
+# ## 算使用者的bmi: 體重/身高(m)平方
+# bmi = weight / ((height/100) ** 2) # pow((height/100), 2)
+# print(f"BMI是{bmi:+5.2f}")
+# ## 目前bmi狀態
+# if (0 < bmi < 18.5): # False
+#     print("體重過輕")
+# elif (bmi >= 18.5 and bmi < 24): # else if (判斷) : True and False = False
+#     print("你很健康") 
+# elif (bmi >= 24 and bmi < 27): # True and False = False
+#     print("過重")
+# elif (bmi >= 27 and bmi < 30): # True and True = True
+#     print("輕度肥胖")
+# elif (bmi >= 30 and bmi <= 35):
+#     print("中度肥胖")
+# elif (bmi >= 35):
+#     print("重度肥胖")
+# else:
+#     print("你的數字可能有問題?")
+# =============================================================================
 
 # 改善 雙層if:如果使用者輸入的是數字才可以計算判斷 (tryExcept劣質版)
+weight = input("請輸入你的體重(kg)")
+height = input("請輸入你的身高(cm)")
+print(f"{height}是身高, {weight}是體重")
+## 算使用者的bmi: 體重/身高(m)平方
+if (weight.isdigit() and height.isdigit()):
+    weight = float(weight)
+    height = float(height)
+    bmi = weight / ((height/100) ** 2) # pow((height/100), 2)
+    print(f"BMI是{bmi:+5.2f}")
+    ## 目前bmi狀態
+    if (0 < bmi < 18.5): # False
+        print("體重過輕")
+    elif (bmi >= 18.5 and bmi < 24): # else if (判斷) : True and False = False
+        print("你很健康") 
+    elif (bmi >= 24 and bmi < 27): # True and False = False
+        print("過重")
+    elif (bmi >= 27 and bmi < 30): # True and True = True
+        print("輕度肥胖")
+    elif (bmi >= 30 and bmi <= 35):
+        print("中度肥胖")
+    elif (bmi >= 35):
+        print("重度肥胖")
+    else:
+        print("你的數字可能有問題?")
+else:
+    print("阿你這個根本不是數字吧!")        
+
 
 
 
