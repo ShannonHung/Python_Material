@@ -23,11 +23,9 @@ Created on Tue Jul 20 22:50:57 2021
  
 
 # 再試試看Dict: 只取Key
-# =============================================================================
-# testdict = {'one': 1, 'two': 2, 'three':3}
-# for i in testdict:
-#     print(i)
-# =============================================================================
+testdict = {'one': 1, 'two': 2, 'three':3}
+for i in testdict:
+    print(i)
 
 
 # 再試試看Dict: 只取Value
@@ -36,15 +34,13 @@ for i in testdict.values():
     print(i)
 
 # 再試試看Dict: 同時 取Key 和 Value
-# =============================================================================
-# testdict = {'one': 1, 'two': 2, 'three':3}
-# for item in testdict.items():
-#     print(item)
-#     print(type(item))
-#     
-# for key, value in testdict.items():  # 'one': 1
-#     print(f"this is key => {key}, this is value => {value}")
-# =============================================================================
+testdict = {'one': 1, 'two': 2, 'three':3}
+for item in testdict.keys():
+    print(item)
+    print(type(item))
+    
+for key, value in testdict.items():  # 'one': 1
+    print(f"this is key => {key}, this is value => {value}")
 
     
 # for迴圈: range使用方式 (一個input)
