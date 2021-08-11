@@ -18,15 +18,31 @@ Created on Mon Jul 19 21:50:09 2021
 
 
 # 改善2 : 可以不斷的重複輸入 with while
-status = input("是否要計算BMI? (yes請輸入y, no請按任意鍵)")
-print(status)
-while (status=='y' or status=='yes'):
-    print("計算BMI開始...")
+# =============================================================================
+# status = input("是否要計算BMI? (yes請輸入y, no請按任意鍵)") 
+# print(status)
+# while (status=='y' or status=='Y'):
+#     print("計算BMI開始...") 
+#     # BMI ....
+#     print("計算BMI結束!!") 
+#     status = input("是否要計算BMI? (yes請輸入y, no請按任意鍵)") 
+# 
+# print("謝謝惠顧~ 請下次再來~")
+# =============================================================================
+
+while True: # True
+    print("計算BMI開始...") 
     # BMI ....
-    print("計算BMI結束!!")
-    status = input("是否要計算BMI? (yes請輸入y, no請按任意鍵)")
+    print("計算BMI結束!!") 
+    status = input("是否要計算BMI? (yes請輸入y, no請按任意鍵)") 
+    if(status == 'y' or status =='Y'): # while 子民: if 
+        continue # continue => 重作
+    else: # break => 子民
+        break
 
 print("謝謝惠顧~ 請下次再來~")
+
+
 
 # weight = input("請輸入你的體重(kg)")
 # height = input("請輸入你的身高(cm)")
