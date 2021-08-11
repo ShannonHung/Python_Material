@@ -102,25 +102,96 @@ Created on Tue Jul 20 22:50:57 2021
 
 
 # 九九乘法表: 很基本
-for i in range(1,10):
-    print(f"========我是{i}的一份子===========")
+# =============================================================================
+# for i in range(1,10):
+#     print(f"========我是{i}的一份子===========")
+# 
+#     for j in range(1,10): # 1 2 3 4 5 6 7 8 9
+#         # print("我是j的一份子")
+#         # print(f"this is i => {i}")
+#         # print(f"this is j => {j}")
+#         print(f"{i} * {j} = {i*j}")
+#         
+# print("=========Finish========")
+# =============================================================================
 
-    for j in range(1,10): # 1 2 3 4 5 6 7 8 9
-        # print("我是j的一份子")
-        # print(f"this is i => {i}")
-        # print(f"this is j => {j}")
-        print(f"{i} * {j} = {i*j}")
-print("=========Finish========")
+# 雙層for 搭配 容器的用法
 # print("我不屬於誰~")
+# =============================================================================
+# ppl = [['小名', '中學生', "2000,05,06", "0912345678"],['小花', '小學生', "2000,06,06", "0912345698"]]
+# count = 1
+# for person in ppl: # for person in [['小名', '中學生', "2000,05,06", "0912345678"],['小花', '小學生', "2000,06,06", "0912345698"]]
+#     print(f"========第{count}個人的資料========")
+#     
+#     for secret in person: # for i in ['小名', '中學生', "2000,05,06", "0912345678"]:
+#         print("個人資料是=>", secret)
+#         
+#     count += 1
+# 
+# member = [['小名', '中學生', "2000,05,06", "0912345678"],['小花', '小學生', "2000,06,06", "0912345698"]]
+# for person in member: # for person in [['小名', '中學生', "2000,05,06", "0912345678"],['小花', '小學生', "2000,06,06", "0912345698"]]
+#     print(person)
+#     
+#     for secret in person:
+#         print(secret)
+# =============================================================================
+    
 # 三角形: 老師都很愛教的用*印三角形 
 # (課堂練習: 請幫我印出菱形)
+# =============================================================================
+# a = int(input("請輸入底部為幾個*"))
+# e = a // 2 # 5//2 =2..1
+# for i in range(e, -1, -1): # 2 -> 1 -> 0 
+#     print(' '*i + '*'*(a-i*2) + ' '*i)
+#     
+# for i in range(1, e +1, 1): # (1,3,1)=> 1 2 x3
+#     print(' '*i + '*'*(a-i*2) + ' '*i)
+# =============================================================================
 
 
+# BMI 結合for的概念  計算平均 + 加入容器 (資料結構) 
 
+# Step1: 做一個空的容器 裝 BMI
+allPeople = []
 
+number = float(input("請輸入你要測幾次bmi=>")) # 10
+count = 0.0
+while True:
+    # bmi
+    weight = input("請輸入你的體重(kg)")
+    height = input("請輸入你的身高(cm)")
+    ## 算使用者的bmi: 體重/身高(m)平方
+    if (weight.isdigit() and height.isdigit()): # 判斷是否為數字 使用 函式 變數.isdigit() = True False
+        weight = float(weight) # 如果是True發現是數字，我才會開始計算BMI然後把變數轉成數字
+        height = float(height) # 如果是True發現是數字，我才會開始計算BMI然後把變數轉成數字
+        bmi = weight / ((height/100) ** 2) # pow((height/100), 2)
+        # Step2: 把BMI append 到 allPeople最後一格
+        allPeople.append(bmi)
+        print(f"BMI是{bmi:+5.2f}") # 偷偷看一下目前BMI是多少 把她print出來
+        ## 目前bmi狀態
+        if (0 < bmi < 18.5): # 0 < bmi < 18.5: 過輕
+            print("體重過輕")
+        elif (bmi >= 18.5 and bmi < 24): # else if (判斷) : True and False = False
+            print("你很健康") 
+        elif (bmi >= 24 and bmi < 27): # True and False = False
+            print("過重")
+        elif (bmi >= 27 and bmi < 30): # True and True = True
+            print("輕度肥胖")
+        elif (bmi >= 30 and bmi <= 35):
+            print("中度肥胖")
+        elif (bmi >= 35):
+            print("重度肥胖")
+        else:
+            print("你的數字可能有問題?")
+    else:
+        print("阿你這個根本不是數字吧!")  
+    count = count + 1 # 目前跑的次數 會一直+1
+    if(number == count):# count == number 目前的次數跟 使用者希望跑的次數有沒有一樣
+        break
+    else:
+        continue
+    # (count += 1) equal to (count = count + 1)
 
-
-# BMI 結合for的概念  計算平均 + 加入容器 (資料結構)
-
-
+# Step3: 檢查一下目前長甚麼樣子
+print(allPeople)
 

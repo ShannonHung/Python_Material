@@ -4,8 +4,6 @@ Created on Tue Jul 27 00:23:18 2021
 @title : 06-5 Exception 例外處理
 @author: shannon
 """
-# TraceBack: 追朔程式呼叫的歷程 (會讓程式停止 如果沒tryExcept)
-
 
 # try...except...避免因為發生例外而被終止: (即使發生例外也不會讓程式停止)
     # 你可以發現try...catch...可以讓程式正常的印出print me please!
@@ -13,8 +11,6 @@ Created on Tue Jul 27 00:23:18 2021
 
 # 捕捉特定的例外 except 特定例外類型 as 變數名稱:
 
-    
-# (承上題)try...except...else...finally...
 
 
 # BMI 改寫原本的code: 加入try...catch...
