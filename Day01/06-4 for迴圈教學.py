@@ -195,3 +195,10 @@ while True:
 # Step3: 檢查一下目前長甚麼樣子
 print(allPeople)
 
+sum = 0
+for i in allPeople:
+    sum = sum + i
+    print("全部的bmi加總 => ", sum) 
+print(f"平均=> {sum/len(allPeople):5.2f}")
+
+
