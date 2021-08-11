@@ -20,34 +20,43 @@ Created on Tue Jul 20 22:50:57 2021
 # for i in name:
 #     print(i)
 # =============================================================================
- 
 
+# Ctrl + S 儲存 
+# 舉例: movie = {'末日Z站': [250, True, "殭屍", "20:00"], '歌喉讚': []}
+# 訣竅dict.items() => key and value; dict.keys() => 只拿key; dict.values() => 只拿value
 # 再試試看Dict: 只取Key
-testdict = {'one': 1, 'two': 2, 'three':3}
-for i in testdict:
-    print(i)
-
-
-# 再試試看Dict: 只取Value
-testdict = {'one': 1, 'two': 2, 'three':3}
-for i in testdict.values():
-    print(i)
-
-# 再試試看Dict: 同時 取Key 和 Value
-testdict = {'one': 1, 'two': 2, 'three':3}
-for item in testdict.keys():
-    print(item)
-    print(type(item))
-    
-for key, value in testdict.items():  # 'one': 1
-    print(f"this is key => {key}, this is value => {value}")
+# =============================================================================
+# testdict = {'one': 1, 'two': 2, 'three':3}
+# for i in testdict: # 展示所有資料
+#     print(i)
+# 
+# # 再試試看Dict: 只取Value
+# testdict = {'one': 1, 'two': 2, 'three':3}
+# for i in testdict.values():
+#     print(i)
+# 
+# # 再試試看Dict: 同時 取Key 和 Value
+# testdict = {'one': 1, 'two': 2, 'three':3}
+# for item in testdict.items():
+#     print(item)
+#     print(type(item))
+#     
+# for key, value in testdict.items():  # 'one': 1
+#     print(f"this is key => {key}, this is value => {value}")
+# =============================================================================
 
     
 # for迴圈: range使用方式 (一個input)
-
+# =============================================================================
+# for i in range(101):
+#     print(i)
+# =============================================================================
 
 # for迴圈: range使用方式 (2個input)
-
+sum = 0 
+for i in range(5,11):
+    sum = sum + i
+    print(f"加上{i}之後的sum，目前 sum 加總是 => {sum}")
 
 # for迴圈: range使用方式 (3個input)
 
