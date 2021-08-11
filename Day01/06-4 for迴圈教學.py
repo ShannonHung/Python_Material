@@ -4,6 +4,12 @@ Created on Tue Jul 20 22:50:57 2021
 @title: 06-4 for迴圈
 @author: shannon
 """
+
+# 基本list Cart購物車
+cart = ['c', 'b', 'a']
+for i in cart:
+    print(i)
+
 # 基本的走訪字串, 集合, 字典 (還記得之前說過嗎? str也是容器的一種喔)
 
 

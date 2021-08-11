@@ -75,6 +75,7 @@ number = float(input("請輸入你要測幾次bmi=>")) # 10
 count = 0.0
 while True:
     print("開始跑")
+    # bmi
     weight = input("請輸入你的體重(kg)")
     height = input("請輸入你的身高(cm)")
     print(f"{height}是身高, {weight}是體重")
