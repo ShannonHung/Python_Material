@@ -199,6 +199,6 @@ sum = 0
 for i in allPeople:
     sum = sum + i
     print("全部的bmi加總 => ", sum) 
-print(f"平均=> {sum/len(allPeople):5.2f}")
+print(f"平均=> {sum/len(allPeople):5.2f}") # len(容器) = 容器的個數 
 
 
