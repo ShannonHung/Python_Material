@@ -32,24 +32,37 @@ Created on Thu Jul 29 17:30:32 2021
 # =============================================================================
 
 # 非數字: str
-def thankyou(name ="OOO", yourName="我"):
-    print("您好" , name , yourName , "歡迎您下次再來!") 
-    # /n就是下一行的意思
-    words ="您好" + name + yourName + "歡迎您下次再來!" + "\n" + "    敬上"
-    return words
+# =============================================================================
+# def thankyou(name ="OOO", yourName="我"): 
+#     print("您好" , name , yourName , "歡迎您下次再來!") 
+#     # /n就是下一行的意思
+#     words ="您好" + name + yourName + "歡迎您下次再來!" + "\n" + "    敬上"
+#     return words # 不一定要return; 也可以不寫return
+# 
+# yourName = "shannon"
+# thankyou("小美", yourName)
+# print(thankyou())
+# =============================================================================
+
+# 容器物件: list, set, tuple, dict (隨意容器的總和) 
+classB = [10,9,5,8]
+
+def score_Sum(allpeople = []):
+    total = 0
+    for i in allpeople:
+        print("目前的數字 =>", i)
+        total = total + i
+        print("加總結束 \n 跑下一個迴圈loop")
+    return total
+
+print("ClassA的總分", score_Sum([100,90,50,80]))
+print("ClassB的總分", score_Sum(classB))
 
 
-yourName = "shannon"
-thankyou("小美", yourName)
-print(thankyou())
 
-# function帶有參數
 
 
 # 變數的有效範圍 Scope Rule
-
-
-# 容器物件的scope role
 
 
 # BMI整理
