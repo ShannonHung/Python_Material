@@ -41,12 +41,17 @@ Created on Tue Jul 27 00:23:18 2021
 
 # 捕捉特定的例外 except 特定例外類型 as 變數名稱: Ex. except ZeroDivisionError as e:
 while True:
+    print("開始進入try")
     
+    # ===========================TRY: START================================
     try:
         child = input("請輸入分子") # 不能先轉數字 因為有可能會輸入q 
         mom = input("請輸入分母") # 不能先轉數字 因為有可能會輸入q 
         if(child == 'q' or mom == 'q'): break
-        
+    
+        if(child == '1'): 
+            raise ValueError() # 強迫電腦 跳 特定錯誤 ， Exception 
+    
         # 確定不是q之後，我們再把他轉成數字
         child = float(child) # 變數 str 轉換成 float小數點作為分子計算
         mom = float(mom) # 變數 str 轉換成 float小數點作為分母計算
@@ -64,8 +69,13 @@ while True:
     # 如果上面的except甚麼都抓不到 最極端的狀況就執行 這裡!!
     except: # 沒想到的錯誤  
         print("好像有問題喔?!") # 上面except以外的錯誤 發生的話就執行這裡
+    else: # 完全沒有任和錯誤就會執行
+        print("wow!!! 完全沒有錯誤!")
+    finally:  # 不管怎麼樣 有錯沒錯 都會執行
+        print("無論怎麼樣都會執行")
+    # ===========================TRY: END================================
 
-print("Done") # not part of try except，所以不會被上面的例外影響 我走我的路  
+    print("Try結束") # not part of try except，所以不會被上面的例外影響 我走我的路  
 
 
 # child = float(input("請輸入分子"))
