@@ -34,13 +34,14 @@ Created on Thu Jul 29 17:30:32 2021
 # 非數字: str
 def thankyou(name ="OOO", yourName="我"):
     print("您好" , name , yourName , "歡迎您下次再來!") 
-    # words ="您好" + name + yourName + "歡迎您下次再來!"
-    # return words
+    # /n就是下一行的意思
+    words ="您好" + name + yourName + "歡迎您下次再來!" + "\n" + "    敬上"
+    return words
 
 
 yourName = "shannon"
 thankyou("小美", yourName)
-thankyou()
+print(thankyou())
 
 # function帶有參數
 
