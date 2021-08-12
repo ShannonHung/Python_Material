@@ -48,9 +48,7 @@ while True:
         child = input("請輸入分子") # 不能先轉數字 因為有可能會輸入q 
         mom = input("請輸入分母") # 不能先轉數字 因為有可能會輸入q 
         if(child == 'q' or mom == 'q'): break
-    
-        if(child == '1'): 
-            raise ValueError() # 強迫電腦 跳 特定錯誤 ， Exception 
+        if(child == '1'): raise ZeroDivisionError() # 強迫電腦 跳 特定錯誤 ， Exception 
     
         # 確定不是q之後，我們再把他轉成數字
         child = float(child) # 變數 str 轉換成 float小數點作為分子計算
@@ -59,11 +57,11 @@ while True:
         result = float(child) / float(mom) # 進行除法
         print(f"{child}/{mom} 答案是 {child/mom:5.2f}") # 印出解答
     # 抓到分母為0的錯誤
-    except ZeroDivisionError as erro: # 有想到的錯誤 放到 erro 變數 名稱自由改 錯誤訊息 放到erro
+    except ZeroDivisionError as error: # 有想到的錯誤 放到 erro 變數 名稱自由改 錯誤訊息 放到erro
         print("欸!!!分母不能為0阿!!!") # 如果抓到分母為0的錯誤，就執行這裡
-        print(erro) # 如果抓到分母為0的錯誤，就執行這裡
+        print(error) # 如果抓到分母為0的錯誤，就執行這裡
     # 型態轉換的錯誤 str -> float | int ; 發生就 把錯誤放到e變數裡面
-    except ValueError:  
+    except ValueError:  # 如果沒有as 變數 也沒差! 頂多就印不出來電腦的錯誤訊息 
         print("欸!!! 你要輸入數字阿!!!") # 型態轉換的錯誤 發生的話就執行這裡
         # print(e) # 型態轉換的錯誤 發生的話就執行這裡
     # 如果上面的except甚麼都抓不到 最極端的狀況就執行 這裡!!
