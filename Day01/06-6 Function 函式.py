@@ -45,24 +45,31 @@ Created on Thu Jul 29 17:30:32 2021
 # =============================================================================
 
 # 容器物件: list, set, tuple, dict (隨意容器的總和) 
-classB = [10,9,5,8]
+# =============================================================================
+# classB = [10,9,5,8]
+# 
+# def score_Sum(allpeople = []):
+#     total = 0
+#     for i in allpeople:
+#         print("目前的數字 =>", i)
+#         total = total + i
+#         print("加總結束 \n 跑下一個迴圈loop \n ")
+#     return total
+# 
+# print("ClassA的總分", score_Sum([100,90,50,80]))
+# print("ClassB的總分", score_Sum(classB))
+# 
+# =============================================================================
 
-def score_Sum(allpeople = []):
-    total = 0
-    for i in allpeople:
-        print("目前的數字 =>", i)
-        total = total + i
-        print("加總結束 \n 跑下一個迴圈loop")
-    return total
+# 變數的有效範圍 Scope Rule: PPT
+world = "I am the king" # global variable 
 
-print("ClassA的總分", score_Sum([100,90,50,80]))
-print("ClassB的總分", score_Sum(classB))
+def country():
+    global world # 如果少了這個就會變成區域變數
+    world = 'I am the queen' # 我想要在world後面新增文字: 
+    print("這是在裡面=> ", world)
 
-
-
-
-
-# 變數的有效範圍 Scope Rule
-
+country()
+print("這是外面=> ", world)
 
 # BMI整理
