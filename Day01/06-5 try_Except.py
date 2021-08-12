@@ -63,9 +63,9 @@ while True:
         print("欸!!!分母不能為0阿!!!") # 如果抓到分母為0的錯誤，就執行這裡
         print(erro) # 如果抓到分母為0的錯誤，就執行這裡
     # 型態轉換的錯誤 str -> float | int ; 發生就 把錯誤放到e變數裡面
-    except ValueError as e:  
+    except ValueError:  
         print("欸!!! 你要輸入數字阿!!!") # 型態轉換的錯誤 發生的話就執行這裡
-        print(e) # 型態轉換的錯誤 發生的話就執行這裡
+        # print(e) # 型態轉換的錯誤 發生的話就執行這裡
     # 如果上面的except甚麼都抓不到 最極端的狀況就執行 這裡!!
     except: # 沒想到的錯誤  
         print("好像有問題喔?!") # 上面except以外的錯誤 發生的話就執行這裡
