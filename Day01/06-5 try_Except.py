@@ -13,29 +13,66 @@ Created on Tue Jul 27 00:23:18 2021
 # try...except...避免因為發生例外而被終止: (即使發生例外也不會讓程式停止)
 
 ##  =========有try except 差別 =========
-a = 1
-b = 0
-# 世界1 : 噴錯 try except
-try:
-    print(a/b) # 噴錯  到 except 那邊去執行
-    print("我是try的一份子") # 這裡不會執行
-except: # 任何錯誤就會給他
-    print("我發現錯誤!!! 完蛋惹!! 但是沒關係!! 不會有紅紅") 
-    
-# 世界2: 不會世界1的錯誤影響，因為世界1被try except 包住了，交給他們處理就對了 
-print("你好!!!")
-print("hello!!!")
+# =============================================================================
+# a = 1
+# b = 0
+# # 世界1 : 噴錯 try except
+# try:
+#     print(a/b) # 噴錯 到 except 那邊去執行
+#     print("我是try的一份子") # 這裡不會執行
+# except: # 任何錯誤就會給他
+#     print("我發現錯誤!!! 完蛋惹!! 但是沒關係!! 不會有紅紅") 
+#     
+# # 世界2: 不會世界1的錯誤影響，因為世界1被try except 包住了，交給他們處理就對了 
+# print("你好!!!")
+# print("hello!!!")
+# =============================================================================
 
 ## =========沒有try except的差別=========
-a = 1
-b = 0
-print(a/b)
-print("我發現錯誤!!! 完蛋惹!! 但是沒關係!! 不會有紅紅") 
-print("你好!!!")
-print("hello!!!")
+# =============================================================================
+# a = 1
+# b = 0
+# print(a/b)
+# print("我發現錯誤!!! 完蛋惹!! 但是沒關係!! 不會有紅紅") 
+# print("你好!!!")
+# print("hello!!!")
+# =============================================================================
 
 
-# 捕捉特定的例外 except 特定例外類型 as 變數名稱:
+# 捕捉特定的例外 except 特定例外類型 as 變數名稱: Ex. except ZeroDivisionError as e:
+while True:
+    
+    try:
+        child = input("請輸入分子")
+        mom = input("請輸入分母")
+        if(child == 'q' or mom == 'q'): break
+        
+    #把child 跟 mom 轉成數字，因為沒有要quit退出
+        child = float(child)
+        mom = float(mom)
+        
+        result = float(child) / float(mom)
+        print(f"{child}/{mom} 答案是 {child/mom:5.2f}")
+        
+    except ZeroDivisionError as erro: # 有想到的錯誤 放到 erro 變數 名稱自由改 錯誤訊息 放到erro
+        print("欸!!!分母不能為0阿!!!")
+        print(erro)
+        
+    except ValueError as e:  # 有想到的錯誤
+        print("欸!!! 你要輸入數字阿!!!")
+        print(e)
+        
+    except: # 沒想到的錯誤 
+        print("好像有問題喔?!")
+
+
+# child = float(input("請輸入分子"))
+# mom = float(input("請輸入分母"))
+# result = child / mom
+# print(f"{child}/{mom} 答案是 {child / mom:5.2f}") 
+
+
+
 
 
 
