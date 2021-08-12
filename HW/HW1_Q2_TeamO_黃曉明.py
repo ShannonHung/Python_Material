@@ -18,14 +18,18 @@ while True:
         month = int(month)
         if(month >= 3 and month <= 5):
             print(f'{month}月是在春天')
+            answer['春天'] += 1
             # DONE: 秋天, 夏天, 冬天也是跟春天一樣的步驟
         elif(month >= 6 and month <= 8):
             print(f'{month}月是在夏天')
+            answer['夏天'] += 1
         elif(month >= 9 and month <= 11):
             print(f'{month}月是在秋天')
+            answer['秋天'] += 1
         # 12 1 2 冬天
         elif(month == 1 or month == 2 or month == 12):   
             print(f'{month}月是在冬天')
+            answer['冬天'] += 1
         else:
             print("錯誤的範圍，請輸入1-12其中一個數字")
             wrong += 1 # wrong = wrong + 1 
