@@ -11,9 +11,11 @@ wrong = 0 # 錯誤累積次數
 while True:
     try:
         month = input("請輸入你在幾月出生 (ex. 1), 如果想退出請輸入 q 或 Q =>")
+        
         # DONE: 如果輸入q或是Q就退出 
         if(month == 'q' or month == 'Q'):
             break
+        
         # DONE: 因為要進行數字比較，請轉成int
         month = int(month)
         if(month >= 3 and month <= 5):
@@ -35,6 +37,7 @@ while True:
             wrong += 1 # wrong = wrong + 1 
         # DONE: 如果使用者不是輸入1-12月就顯示以下錯誤
             # DONE: 錯誤累計次數+1次
+            
     except:
         wrong +=1 # 錯誤累計次數+1次
         print("!!!WRONG !!!! please input the integer")
